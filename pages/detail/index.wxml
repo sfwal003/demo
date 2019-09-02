@@ -1,0 +1,131 @@
+<view class="container {{horizontal ? 'horizontal' : ''}}">
+	<audio
+	 src="{{src}}"
+	 id="myAudio"
+	 binderror="onerror"
+	 bindplay="onplay"
+	 bindpause="onpause"
+	 bindtimeupdate="timeupdate"
+	 bindended="onended"
+	 style="display:none;"
+	/>
+	<view class="topimgs" bindtap="detailimg">
+		<swiper>
+			<swiper-item wx:for="{{imgs}}" wx:key="index">
+				<image src="{{item.bigImgUrl}}" mode="aspectFill" lazy-load="true" />
+			</swiper-item>
+		</swiper>
+		<view class="pages">1/10</view>
+	</view>
+	<view class="bg" wx:if="{{isShow}}" />
+	<view class="bdtxts">
+		<view class="bdtop">
+			<view class="title a5">云南省博物馆</view>
+			<view class="class">人文历史</view>
+		</view>
+		<view class="playbox" wx:if="{{!horizontal}}">
+			<view class="playbtn" bindtap="changePlayerStatus">
+				<image src="{{isplay ? '../../images/zantinx@2x.png' : '../../images/bofangx@2x.png'}}" mode="widthFix" />
+			</view>
+			<view class="lines">
+				<view class="timeline" id="timeline" bindtap="progressClick">
+					<view class="playline" style="width:{{progressWidth}}%">
+						<view
+						 class="playk"
+						 bindtouchstart="touchStart"
+						 bindtouchmove="touchMove"
+						 bindtouchend="touchEnd"
+						>
+							<image
+							 src="../../images/loading.gif"
+							 mode="widthFix"
+							 class="loading"
+							 wx:if="{{waiting}}"
+							/>
+						</view>
+					</view>
+				</view>
+				<view class="playtime">{{currentTime}}</view>
+				<view class="alltime">{{duration}}</view>
+			</view>
+		</view>
+		<view class="detailinfo">
+			<view class="desc" bindtap="openintro">
+				<view class="con">云南省博物馆成立于1951年，是云南省文云南省博物馆成立于1951年，是云南省文云南省博物馆成立于1951年，是云南省文云南省博物馆成立于1951年，是云南省文</view>
+				<view class="more">查看更多</view>
+			</view>
+			<view class="content">
+				<view>营业时间：
+					<text>周二到周日9:00-17:00</text>
+				</view>
+				<view>门票：
+					<text>免费</text>
+				</view>
+				<view>地址：
+					<text>云南省昆明市广福路6393号</text>
+				</view>
+				<view>联系电话：
+					<text>0871-86666666</text>
+				</view>
+			</view>
+			<image src="../../images/qdh@2x.png" mode="widthFix" class="go" />
+		</view>
+		<view class="introbox {{isShow ? 'show' : ''}}" wx:if="{{!horizontal}}">
+			<image
+			 class="close"
+			 src="../../images/quxiao@2x.png"
+			 mode="widthFix"
+			 wx:if="{{isShow}}"
+			 bindtap="closeintro"
+			/>
+			<scroll-view class="introscroll" scroll-y>
+				<view class="item">
+					云南省博物馆是一座中国省级综合性博物馆，位于云南省昆明市广福路6393号 [1] ，创建于1951年8月，陈列面积达2400平方米。馆内现有以下10个部门，分别是：担负藏品收藏与保护的保管部；承担向社会公众介绍宣传博物馆展览的社会教育部；主管文物鉴定和文物征集的鉴定站；编辑出版馆刊《云南文物》、负责云南省博物馆网站日常管理维护及收藏各类书刊和信息资料的信息部；承担文物修复和保护的技术部；负责博物馆新馆建设的基建办；负责全馆外事及学术交流活动的合作交流部；负责博物馆文物安全的保卫科；负责全馆后勤保障工作的办公室；负责全馆人事管理及考核工作的人事教育科。现有职工100余人，其中，中高级专业技术人员的比例约占职工人数的一半。
+				</view>
+			</scroll-view>
+		</view>
+	</view>
+
+	<view class="playbox" wx:if="{{horizontal}}">
+		<view class="playbtn" bindtap="changePlayerStatus">
+			<image src="{{isplay ? '../../images/zantinx@2x.png' : '../../images/bofangx@2x.png'}}" mode="widthFix" />
+		</view>
+		<view class="lines">
+			<view class="timeline" id="timeline" bindtap="progressClick">
+				<view class="playline" style="width:{{progressWidth}}%">
+					<view
+					 class="playk"
+					 bindtouchstart="touchStart"
+					 bindtouchmove="touchMove"
+					 bindtouchend="touchEnd"
+					>
+						<image
+						 src="../../images/loading.gif"
+						 mode="widthFix"
+						 class="loading"
+						 wx:if="{{waiting}}"
+						/>
+					</view>
+				</view>
+			</view>
+			<view class="playtime">{{currentTime}}</view>
+			<view class="alltime">{{duration}}</view>
+		</view>
+	</view>
+
+	<view class="introbox {{isShow ? 'show' : ''}}" wx:if="{{horizontal}}">
+		<image
+		 class="close"
+		 src="../../images/quxiao@2x.png"
+		 mode="widthFix"
+		 wx:if="{{isShow}}"
+		 bindtap="closeintro"
+		/>
+		<scroll-view class="introscroll" scroll-y>
+			<view class="item">
+				云南省博物馆是一座中国省级综合性博物馆，位于云南省昆明市广福路6393号 [1] ，创建于1951年8月，陈列面积达2400平方米。馆内现有以下10个部门，分别是：担负藏品收藏与保护的保管部；承担向社会公众介绍宣传博物馆展览的社会教育部；主管文物鉴定和文物征集的鉴定站；编辑出版馆刊《云南文物》、负责云南省博物馆网站日常管理维护及收藏各类书刊和信息资料的信息部；承担文物修复和保护的技术部；负责博物馆新馆建设的基建办；负责全馆外事及学术交流活动的合作交流部；负责博物馆文物安全的保卫科；负责全馆后勤保障工作的办公室；负责全馆人事管理及考核工作的人事教育科。现有职工100余人，其中，中高级专业技术人员的比例约占职工人数的一半。
+			</view>
+		</scroll-view>
+	</view>
+</view>
+

@@ -1,0 +1,29 @@
+.imgslist {
+  padding: 27.6rpx 20.7rpx;
+  display: block;
+  height: 100%;
+  box-sizing: border-box;
+  width: 100vw;
+}
+.imgslist .item {
+  padding: 13.8rpx 20.7rpx;
+  width: 50%;
+  box-sizing: border-box;
+  float: left;
+}
+.imgslist .item image {
+  width: 100%;
+  height: 234.6rpx;
+  display: block;
+  border-radius: 10px;
+}
+.horizontal .imgslist {
+  padding: 16.6rpx 12.45rpx;
+}
+.horizontal .imgslist .item {
+  padding: 8.3rpx 12.45rpx;
+  width: 33.3333%;
+}
+.horizontal .imgslist .item image {
+  height: 141.1rpx;
+}

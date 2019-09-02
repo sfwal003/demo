@@ -1,0 +1,121 @@
+<!--index.wxml-->
+<view class="container {{horizontal ? 'horizontal' : ''}}">
+	<audio
+	 src="{{src}}"
+	 id="myAudio"
+	 binderror="onerror"
+	 bindplay="onplay"
+	 bindpause="onpause"
+	 bindtimeupdate="timeupdate"
+	 bindended="onended"
+	 style="display:none;"
+	/>
+	<tabbar
+	 pcode="{{pcode}}"
+	 ccode="{{ccode}}"
+	 bindchangeCity="changecity"
+	 id="tabbar"
+	/>
+	<spotlist
+	 id="spotlist"
+	 list="{{lists}}"
+	 bindaddPlayList="addPlayList"
+	 bindchangeplay="changeplayshow"
+	/>
+	<view class="index-playbox {{isShow ? 'show' : ''}} {{islistshow ? 'listshow' : ''}}">
+		<view class="ico" bindtap="changeShow">
+			<image src="{{isShow ? openico : closeico}}" mode="widthFix" />
+		</view>
+		<view class="play-info">
+			<view class="hd">
+				<view class="title">{{currentTitle}}</view>
+				<image src="../../images/{{ytState ? 'yujian@2x.png' : 'yttj@2x.png'}}" mode="widthFix" bindtap="changeYtState" />
+			</view>
+			<view class="bd">
+				<view class="btns">
+					<image
+					 src="../../images/zuokuai@2x.png"
+					 class="prev"
+					 mode="widthFix"
+					 bindtap="prev"
+					/>
+					<image
+					 src="{{isplay ? '../../images/zanting@2x.png' : '../../images/play@2x.png'}}"
+					 class="play"
+					 mode="widthFix"
+					 bindtap="changePlayerStatus"
+					/>
+					<image
+					 src="../../images/youkuai@2x.png"
+					 class="next"
+					 mode="widthFix"
+					 bindtap="next"
+					/>
+					<image
+					 src="../../images/bflb@2x.png"
+					 class="list"
+					 mode="widthFix"
+					 bindtap="showList"
+					 bindtap="showlist"
+					/>
+				</view>
+				<view class="lines">
+					<view class="timeline" id="timeline" bindtap="progressClick">
+						<view class="playline" style="width:{{progressWidth}}%">
+							<view
+							 class="playk"
+							 bindtouchstart="touchStart"
+							 bindtouchmove="touchMove"
+							 bindtouchend="touchEnd"
+							>
+								<image
+								 src="../../images/loading.gif"
+								 mode="widthFix"
+								 class="loading"
+								 wx:if="{{waiting}}"
+								/>
+							</view>
+						</view>
+					</view>
+					<view class="playtime">{{currentTime}}</view>
+					<view class="alltime">{{duration}}</view>
+				</view>
+			</view>
+		</view>
+	</view>
+	<view class="list-info {{islistshow ? 'listshow' : ''}}">
+		<view class="ico" bindtap="changeShow">
+			<image src="{{islistshow ? openico : closeico}}" mode="widthFix" />
+		</view>
+		<view class="title">播放列表</view>
+		<scroll-view
+		 scroll-y
+		 class="scrolllist"
+		 scroll-with-animation="true"
+		 scroll-into-view="item-{{currentsong}}"
+		 bindscroll="playlistscroll"
+		 scroll-top="{{playlistscrollt}}"
+		>
+			<view
+			 class="item {{index == currentsong ? 'on' : ''}}"
+			 wx:for="{{playList}}"
+			 wx:key="index"
+			 id="item-{{index}}"
+			 bindtap="changesong"
+			 data-index="{{index}}"
+			>
+				<view class="listid">{{index+1}}.</view>
+				<view class="name">{{item.title}}</view>
+				<view class="time">1:06</view>
+				<image
+				 src="../../images/bflbqx@2x.png"
+				 data-index="{{index}}"
+				 class="remove"
+				 bindtap="removesong"
+				 mode="widthFix"
+				/>
+			</view>
+		</scroll-view>
+	</view>
+</view>
+

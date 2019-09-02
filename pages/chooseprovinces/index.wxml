@@ -1,0 +1,21 @@
+<view class="container {{horizontal ? 'horizontal' : ''}}">
+	<view class="chooseCity">
+		<view class="tips">选择您想游览的省/市/州，或者可以直接呼叫叮当叮当告诉我哦~</view>
+		<scroll-view
+		 class="citylist"
+		 scroll-y
+		 bindscroll="cityscroll"
+		 scroll-top="{{cityscrollt}}"
+		>
+			<view
+			 class="item"
+			 wx:for="{{provinces}}"
+			 wx:key="index"
+			 bindtap="choosepcode"
+			 data-name="{{item.name}}"
+			>{{item.name}}
+			</view>
+		</scroll-view>
+	</view>
+</view>
+

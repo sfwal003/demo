@@ -1,0 +1,104 @@
+.index-playbox {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: #151515;
+  transform: translate3d(0, calc(100% - 43px), 0);
+  transition: all 0.4s;
+  padding-top: 69rpx;
+}
+.index-playbox.show {
+  padding-top: 0;
+  transform: translate3d(0, 0, 0);
+}
+.index-playbox .ico {
+  height: 69rpx;
+  width: 69rpx;
+  position: absolute;
+  top: 0;
+  background: #151515;
+  left: 50%;
+  transform: translate3D(-50%, -30%, 0);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 69rpx;
+}
+.index-playbox .ico image {
+  width: 30.36rpx;
+  height: auto;
+  vertical-align: top;
+  padding-top: 16.56rpx;
+}
+.index-playbox .play-info .hd {
+  display: flex;
+  justify-content: space-between;
+  padding: 27.6rpx 41.4rpx;
+}
+.index-playbox .play-info .hd .title {
+  font-size: 33.12rpx;
+  color: #fff;
+}
+.index-playbox .play-info .hd image {
+  width: 96.6rpx;
+  height: auto;
+}
+.index-playbox .play-info .bd .btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.index-playbox .play-info .bd .btns image {
+  margin: 0 55.2rpx;
+  display: block;
+}
+.index-playbox .play-info .bd .btns .prev,
+.index-playbox .play-info .bd .btns .next {
+  width: 41.4rpx;
+  height: auto;
+}
+.index-playbox .play-info .bd .btns .play {
+  width: 55.2rpx;
+}
+.index-playbox .play-info .bd .lines {
+  padding: 41.4rpx 41.4rpx 57.96rpx;
+}
+.index-playbox .play-info .bd .lines .timeline {
+  height: 4px;
+  background: #fff;
+  position: relative;
+  margin-bottom: 22.08rpx;
+  border-radius: 2px;
+}
+.index-playbox .play-info .bd .lines .timeline .playline {
+  height: 4px;
+  position: absolute;
+  width: 138rpx;
+  background: #00D998;
+  border-radius: 2px;
+  left: 0;
+  top: 0;
+}
+.index-playbox .play-info .bd .lines .timeline .playk {
+  position: absolute;
+  left: 138rpx;
+  top: 2px;
+  transform: translateY(-50%);
+  width: 41.4rpx;
+  height: 41.4rpx;
+  background: #fff;
+  border-radius: 50%;
+}
+.index-playbox .play-info .bd .lines .playtime {
+  font-size: 27.6rpx;
+  color: #ABABAB;
+  float: left;
+  line-height: 1;
+}
+.index-playbox .play-info .bd .lines .alltime {
+  font-size: 27.6rpx;
+  color: #ABABAB;
+  float: right;
+  line-height: 1;
+}

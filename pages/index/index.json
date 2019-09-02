@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tabbar":"../components/tabbar/index",
+    "spotlist":"../components/spotList/index",
+    "prograss":"../components/prograss/index"
+  }
+}

@@ -1,0 +1,34 @@
+<view class="spotlist {{horizontal ? 'horizontal' : ''}}">
+	<view class="listnum">已为您在该城市找到23个景点</view>
+	<scroll-view
+	 class="scrolllist"
+	 scroll-y
+	 bindscroll="_changeplay"
+	 scroll-top="{{scrollt}}"
+	>
+		<view
+		 class="item"
+		 wx:for="{{list}}"
+		 wx:key="index"
+		 data-index="{{index}}"
+		 bindtap="detail"
+		>
+			<view class="imgbox" catchtap="_addPlay" data-index="{{index}}">
+				<image src="{{item.img}}" class="itemimg" mode="aspectFill" />
+				<view class="imgbg" />
+				<image src="../../../images/bofangx.png" class="play" mode="widthFix" />
+			</view>
+			<view class="info">
+				<view class="title a5">{{item.name}}</view>
+				<view class="opentime">开放时间:{{item.opentime}}</view>
+				<view class="range">距离:{{item.juli}}</view>
+				<view class="addree">
+					<image src="../../../images/juli@2x.png" mode="aspectFit" />
+					{{item.didian}}
+				</view>
+				<view class="tj">途经</view>
+			</view>
+		</view>
+	</scroll-view>
+</view>
+

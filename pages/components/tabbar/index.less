@@ -1,0 +1,95 @@
+@dw:1.38rpx;
+@dh:0.86px;
+@dw1:0.83rpx;
+.tab-city{
+    width: 100%;
+    display: flex;
+    background: #151515;
+    height: @dw*80;
+    align-items: center;
+    flex-wrap: nowrap;
+    .province{
+        margin-left: @dw*30;
+        padding: 0 @dw*20;
+        font-size: @dw*24;
+        background: #333;
+        border-radius: @dw*22;
+        color: #fff;
+        height: @dw*44;
+        line-height: @dw*44;
+        white-space: nowrap;
+        image{
+            width: @dw*20;
+            height: auto;
+            margin-left: @dw*12;
+        }
+    }
+    .cityList{
+        flex: 1;
+        height: @dw*80;
+        overflow: hidden;
+        padding-left: @dw*30;
+        .cityscroll{
+            white-space: nowrap; 
+            width: 100%;
+            height: @dw*80;
+            line-height: @dw*80;
+            .item{
+                display: inline-block;
+                margin-right: @dw*30;
+                font-size: @dw*24;
+                color: #fff;
+                vertical-align: top;
+                position: relative;
+                &::after{
+                    content: "";
+                    left: 0;
+                    width: 0;
+                    bottom:@dw*18;
+                    height: 2px;
+                    position: absolute;
+                    background: #00D998;
+                    transition: width 0.3s;
+                }
+                &.on{
+                    color: #00D998;
+                }
+                &.on::after{
+                    width: 100%;
+                }
+            }
+        }
+        
+    }
+    &.horizontal{
+        height: @dw1*80;
+        .province{
+            margin-left: @dw1*30;
+            padding: 0 @dw1*20;
+            font-size: @dw1*24;
+            border-radius: @dw1*22;
+            height: @dw1*44;
+            line-height: @dw1*44;
+            image{
+                width: @dw1*20;
+                margin-left: @dw1*12;
+            }
+        }
+        .cityList{
+            height: @dw1*80;
+            padding-left: @dw1*30;
+            .cityscroll{
+                height: @dw1*80;
+                line-height: @dw1*80;
+                .item{
+                    margin-right: @dw1*30;
+                    font-size: @dw1*24;
+                    &::after{
+                        bottom:@dw1*18;
+                    }
+                }
+            }
+            
+        }
+    }
+}

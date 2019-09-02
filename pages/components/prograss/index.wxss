@@ -1,0 +1,50 @@
+  .lines {
+    padding: 41.4rpx 41.4rpx 57.96rpx;
+  }
+  .lines .timeline {
+    height: 4px;
+    background: #fff;
+    position: relative;
+    border-radius: 2px;
+    margin: 0 22rpx 24rpx;
+  }
+  .lines .timeline .playline {
+    height: 4px;
+    position: absolute;
+    width: 0;
+    background: #00D998;
+    border-radius: 2px;
+    left: 0;
+    top: 0;
+  }
+ .lines .timeline .playk {
+    position: absolute;
+    top: 2px;
+    right: 0;
+    transform: translate3d(50%,-50%,0);
+    width: 41.4rpx;
+    height: 41.4rpx;
+    background: #fff;
+    border-radius: 50%;
+  }
+  .lines .timeline .playk .loading{
+    width: 60%;
+    height: 60%;
+    display: block;
+    transform: translate3d(-50%,-50%,0);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+  }
+.lines .playtime {
+    font-size: 27.6rpx;
+    color: #ABABAB;
+    float: left;
+    line-height: 1;
+  }
+.lines .alltime {
+    font-size: 27.6rpx;
+    color: #ABABAB;
+    float: right;
+    line-height: 1;
+  }

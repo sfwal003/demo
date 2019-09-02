@@ -1,0 +1,33 @@
+@dw:1.38rpx;
+@dw1:0.83rpx;
+.imgslist{
+    padding: @dw*20 @dw*15;
+    display: block;
+    height: 100%;
+    box-sizing: border-box;
+    width: 100vw;
+    .item{
+        padding: @dw*10 @dw*15;
+        width: 50%;
+        box-sizing: border-box;
+        float: left;
+        image{
+            width: 100%;
+            height: @dw*170;
+            display: block;
+            border-radius: 10px;
+        }
+    }
+}
+.horizontal{
+    .imgslist{
+        padding: @dw1*20 @dw1*15;
+        .item{
+            padding: @dw1*10 @dw1*15;
+            width: 33.3333%;
+            image{
+                height: @dw1*170;
+            }
+        }
+    }
+}

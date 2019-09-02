@@ -1,0 +1,90 @@
+.tab-city {
+  width: 100%;
+  display: flex;
+  background: #151515;
+  height: 110.4rpx;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.tab-city .province {
+  margin-left: 41.4rpx;
+  padding: 0 27.6rpx;
+  font-size: 33.12rpx;
+  background: #333;
+  border-radius: 30.36rpx;
+  color: #fff;
+  height: 60.72rpx;
+  line-height: 60.72rpx;
+  white-space: nowrap;
+}
+.tab-city .province image {
+  width: 27.6rpx;
+  height: auto;
+  margin-left: 16.56rpx;
+}
+.tab-city .cityList {
+  flex: 1;
+  height: 110.4rpx;
+  overflow: hidden;
+  padding-left: 41.4rpx;
+}
+.tab-city .cityList .cityscroll {
+  white-space: nowrap;
+  width: 100%;
+  height: 110.4rpx;
+  line-height: 110.4rpx;
+}
+.tab-city .cityList .cityscroll .item {
+  display: inline-block;
+  margin-right: 41.4rpx;
+  font-size: 33.12rpx;
+  color: #fff;
+  vertical-align: top;
+  position: relative;
+}
+.tab-city .cityList .cityscroll .item::after {
+  content: "";
+  left: 0;
+  width: 0;
+  bottom: 24.84rpx;
+  height: 2px;
+  position: absolute;
+  background: #00D998;
+  transition: width 0.3s;
+}
+.tab-city .cityList .cityscroll .item.on {
+  color: #00D998;
+}
+.tab-city .cityList .cityscroll .item.on::after {
+  width: 100%;
+}
+.tab-city.horizontal {
+  height: 66.4rpx;
+}
+.tab-city.horizontal .province {
+  margin-left: 24.9rpx;
+  padding: 0 16.6rpx;
+  font-size: 19.92rpx;
+  border-radius: 18.26rpx;
+  height: 36.52rpx;
+  line-height: 36.52rpx;
+}
+.tab-city.horizontal .province image {
+  width: 16.6rpx;
+  margin-left: 9.96rpx;
+}
+.tab-city.horizontal .cityList {
+  height: 66.4rpx;
+  padding-left: 24.9rpx;
+}
+.tab-city.horizontal .cityList .cityscroll {
+  height: 66.4rpx;
+  line-height: 66.4rpx;
+}
+.tab-city.horizontal .cityList .cityscroll .item {
+  margin-right: 24.9rpx;
+  font-size: 19.92rpx;
+}
+.tab-city.horizontal .cityList .cityscroll .item::after {
+  bottom: 14.94rpx;
+}

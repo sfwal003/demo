@@ -1,0 +1,24 @@
+<view class="index-playbox {{isShow ? 'show' : ''}}">
+  <view class="ico" bindtap="changeShow"><image src="{{isShow ? openico : closeico}}" mode="widthFix"></image></view>
+  <view class="play-info">
+    <view class="hd">
+      <view class="title">{{currentTitle}}</view>
+      <image src="../../../images/yttj@2x.png" mode="widthFix"></image>
+    </view>
+    <view class="bd">
+      <view class="btns">
+        <image src="../../../images/zuokuai@2x.png" class="prev" mode="widthFix"></image>
+        <image src="../../../images/play@2x.png" class="play" mode="widthFix"></image>
+        <image src="../../../images/youkuai@2x.png" class="next" mode="widthFix"></image>
+      </view>
+      <view class="lines">
+        <view class="timeline" bindtap="progressClick">
+          <view class="playline"></view>
+          <view class="playk" bindtouchstart="touchStart" bindtouchmove="touchMove" bindtouchend="touchEnd"></view>
+        </view>
+        <view class="playtime">02:12</view>
+        <view class="alltime">19:12</view>
+      </view>
+    </view>
+  </view>
+</view>

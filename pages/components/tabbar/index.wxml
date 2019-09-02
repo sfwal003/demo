@@ -1,0 +1,11 @@
+<view class="tab-city {{horizontal ? 'horizontal' : ''}}">
+  <view class="province" bindtap="choosecity"><text>{{provinces}}</text> <image src="../../../images/xiala@2x.png" mode="widthFix"></image></view>
+  <view class="cityList">
+    <scroll-view scroll-x class="cityscroll" scroll-with-animation="true" scroll-into-view="item{{ccode}}">
+      <block wx:for="{{citys}}" wx:key="index">
+        <view class="item {{item.code==ccode ? 'on' : ''}}" bindtap="_changeCity" data-ccode="{{item.code}}" id="item{{item.code}}">{{item.name}}</view>
+      </block>
+    </scroll-view>
+  </view>
+</view>
+

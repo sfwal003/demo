@@ -1,0 +1,39 @@
+.chooseCity .tips {
+  padding: 20.7rpx 41.4rpx;
+  font-size: 27.6rpx;
+  color: #fff;
+  background: rgba(21, 21, 21, 0.3);
+  line-height: 41.4rpx;
+}
+.chooseCity .citylist {
+  overflow: hidden;
+  height: calc(100vh - 82px);
+  padding: 27.6rpx 0;
+  box-sizing: border-box;
+}
+.chooseCity .citylist .item {
+  padding: 27.6rpx 41.4rpx;
+  font-size: 33.12rpx;
+  color: #fff;
+  background: #333;
+  border-radius: 16.56rpx;
+  margin: 0 27.6rpx 13.8rpx;
+}
+.horizontal .chooseCity .tips {
+  padding: 12.45rpx 24.9rpx;
+  font-size: 16.6rpx;
+  line-height: 24.9rpx;
+}
+.horizontal .chooseCity .citylist {
+  height: calc(100vh - 40px);
+  padding: 16.6rpx 12.45rpx;
+}
+.horizontal .chooseCity .citylist .item {
+  padding: 14.94rpx 24.9rpx;
+  font-size: 19.92rpx;
+  border-radius: 9.96rpx;
+  margin: 0 12.45rpx 8.3rpx;
+  float: left;
+  width: calc(50% - 24.8rpx);
+  box-sizing: border-box;
+}

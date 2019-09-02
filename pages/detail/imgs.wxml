@@ -1,0 +1,18 @@
+<view class="container {{horizontal ? 'horizontal' : ''}}">
+	<scroll-view
+	 class="imgslist"
+	 scroll-y
+	 bindscroll="imgsScroll"
+	 scroll-top="{{imgscrollt}}"
+	>
+		<view class="item" wx:for="{{imgArr}}" wx:key="index">
+			<image
+			 src="{{item}}"
+			 mode="aspectFill"
+			 lazy-load="true"
+			 bindtap='previewImg'
+			/>
+		</view>
+	</scroll-view>
+</view>
+

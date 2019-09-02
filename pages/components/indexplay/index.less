@@ -1,0 +1,110 @@
+@dw:1.38rpx;
+@dh:0.86px;
+.index-playbox{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #151515;
+    transform: translate3d(0,calc(~"100% - 43px"),0);
+    transition: all 0.4s;
+    padding-top: @dw*50;
+    &.show{
+        padding-top: 0;
+        transform: translate3d(0,0,0);
+    }
+    .ico{
+        height: @dw*50;
+        width: @dw*50;
+        position: absolute;
+        top: 0;
+        background: #151515;
+        left: 50%;
+        transform: translate3D(-50%,-30%,0);
+        border-radius:50%;
+        text-align: center;
+        line-height: @dw*50;
+        image{
+            width: @dw*22;
+            height: auto;
+            vertical-align: top;
+            padding-top: @dw*12;
+        } 
+    }
+    
+    .play-info{
+        .hd{
+            display: flex;
+            justify-content:space-between;
+            padding: @dw*20 @dw*30;
+            .title{
+                font-size: @dw*24;
+                color: #fff;
+            }
+            image{
+                width: @dw*70;
+                height: auto;
+            }
+        }
+        .bd{
+            .btns{
+                display: flex;
+                justify-content:center;
+                align-items: center;
+                overflow: hidden;
+                image{
+                    margin: 0 @dw*40;
+                    display: block;
+                }
+                .prev,.next{
+                    width: @dw*30;
+                    height: auto;
+                }
+                .play{
+                    width: @dw*40;
+                }
+            }
+            .lines{
+                padding: @dw*30 @dw*30 @dw*42;
+                .timeline{
+                    height: 4px;
+                    background: #fff;
+                    position: relative;
+                    margin-bottom: @dw*16;
+                    border-radius: 2px;
+                    .playline{
+                        height: 4px;
+                        position: absolute;
+                        width: @dw*100;
+                        background: #00D998;
+                        border-radius: 2px;
+                        left: 0;
+                        top: 0;
+                    }
+                    .playk{
+                        position: absolute;
+                        left: @dw*100;
+                        top: 2px;
+                        transform: translateY(-50%);
+                        width: @dw*30;
+                        height: @dw*30;
+                        background: #fff;
+                        border-radius: 50%;
+                    }
+                }
+                .playtime{
+                    font-size: @dw*20;
+                    color:#ABABAB;
+                    float: left;
+                    line-height: 1;
+                }
+                .alltime{
+                    font-size: @dw*20;
+                    color:#ABABAB;
+                    float: right;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+}

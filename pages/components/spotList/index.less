@@ -1,0 +1,161 @@
+@dw:1.38rpx;
+@dh:0.86px;
+@dw1:0.83rpx;
+@import "../../../utils/xing.wxss";
+.spotlist{
+    .listnum{
+        height: @dw*50;
+        line-height: @dw*50;
+        font-size: @dw*20;
+        color: #fff;
+        background: rgba(21,21,21,0.3);
+        text-align: center;
+    }
+    .scrolllist{
+        overflow: hidden;
+        height: calc(~"100vh - 250rpx");
+        .item{
+            padding: @dw*20 @dw*30;
+            display: flex;
+            position: relative;
+            width: 100%;
+            box-sizing: border-box;
+            .imgbox{
+                width: @dw*160;
+                position: relative;
+                margin-right: @dw*20;
+                .itemimg{
+                    width: @dw*160;
+                    height: @dw*120;
+                    display: block;
+                    border-radius: 14px;
+                }
+                .play{
+                    position: absolute;
+                    width: @dw*50;
+                    height: auto;
+                    right:0;
+                    bottom:0;
+                    // transform: translate3d(-50%,-50%,0);
+                }
+                .imgbg{
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: rgba(0,0,0,0.4);
+                    border-radius: 14px;
+                }
+            }
+            .info{
+                flex: 1;
+                box-sizing: border-box;
+                .title{
+                    font-size: @dw*24;
+                    line-height: 1;
+                    color: #fff;
+                    background-size: auto @dw*24;
+                    padding-left: @dw*55;
+                }
+                .opentime{
+                    font-size: @dw*20;
+                    line-height: 1;
+                    color: #ABABAB;
+                    margin: @dw*16 0 @dw*12;
+                    overflow:hidden;
+                    white-space:nowrap;
+                    text-overflow:ellipsis;
+                    max-width: @dw*300;
+                }
+                .range{
+                    font-size: @dw*18;
+                    line-height: 1;
+                    color: #ABABAB;
+                }
+                .addree{
+                    font-size: @dw*18;
+                    line-height: 1;
+                    color: #fff;
+                    margin-top: @dw*15;
+                    display: flex;
+                    image{
+                        height: @dw*18;
+                        width:@dw*15;
+                        margin-right: @dw*10;
+                    }
+                }
+                .tj{
+                    width: @dw*58;
+                    height: @dw*26;
+                    position: absolute;
+                    bottom: @dw*26;
+                    right: @dw*30;
+                    text-align: center;
+                    font-size: @dw*18;
+                    color: #00D998;
+                    line-height: @dw*26;
+                    background: rgba(0,217,152,0.3);
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+    &.horizontal{
+        .listnum{
+            height: @dw1*50;
+            line-height: @dw1*50;
+            font-size: @dw1*20;
+        }
+        .scrolllist{
+            height: calc(~"100vh - 150rpx");
+            .item{
+                padding: @dw1*20 @dw1*30;
+                .imgbox{
+                    width: @dw1*160;
+                    margin-right: @dw1*20;
+                    .itemimg{
+                        width: @dw1*160;
+                        height: @dw1*120;
+                    }
+                    .play{
+                        width: @dw1*36;
+                    }
+                }
+                .info{
+                    .title{
+                        font-size: @dw1*24;
+                        background-size: auto @dw1*24;
+                        padding-left: @dw1*55;
+                    }
+                    .opentime{
+                        font-size: @dw1*20;
+                        margin: @dw1*16 0 @dw1*12;
+                        max-width: @dw1*500;
+                    }
+                    .range{
+                        font-size: @dw1*18;
+                    }
+                    .addree{
+                        font-size: @dw1*18;
+                        margin-top: @dw1*15;
+                        image{
+                            height: @dw1*18;
+                            width:@dw1*15;
+                            margin-right: @dw1*10;
+                        }
+                    }
+                    .tj{
+                        width: @dw1*58;
+                        height: @dw1*26;
+                        bottom: @dw1*26;
+                        right: @dw1*30;
+                        font-size: @dw1*18;
+                        line-height: @dw1*26;
+                        border-radius: 4px;
+                    }
+                }
+            }
+        }
+    }
+}
